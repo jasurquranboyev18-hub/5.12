@@ -1,17 +1,17 @@
 const nodemailer = require("nodemailer")
-const customErrorHandler = require("./custom-error-handler")
+const customErrorHandler = require("./error.hander")
 
 module.exports = async function(code, email) {
     try{
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
-                user: "nuraddinovruslan76@gmail.com",
+                user: "quranbayevjasur6@gmail.com",
                 pass: process.env.APP_KEY
             }
         })
         await transporter.sendMail({
-            from: "nuraddinovruslan76@gmail.com",
+            from: "quranboyevjasur6@gmail.com",
             to: email,
             subject: "Library verification",
             text: "ushbu xabarda tasdiqlash kodi bor",

@@ -1,6 +1,6 @@
 const express = require("express")
 const cors = require("cors")
-const registerLoginRoutes = require("./router/register-login.routes")
+const registerLoginRoutes = require("./router/register.login.routes")
 const cookieParser = require("cookie-parser")
 require("dotenv").config()
 const connectDB = require("./config/db_config")

@@ -1,6 +1,6 @@
 
 const bcryptjs = require("bcryptjs");
-const emailSender = require("../utils/email.sender");
+const emailSender = require("../utils/emal");
 const CustomErrorHandler = require("../utils/custom-error-handler");;
 const { accesstoken, refreshtoken } = require("../utils/token");
 const userSchema = require("../schema/register.login.schema");

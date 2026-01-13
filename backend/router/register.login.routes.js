@@ -1,5 +1,5 @@
 const {Router} = require("express")
-const { register, login, verify, logout, resendOtp,  } = require("../controller/register-login")
+const { register, login, verify, logout, resendOtp,  } = require("../CONTROLLER/register.login")
 
 const registerLoginRoutes = Router()
  
