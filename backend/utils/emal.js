@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer")
-const customErrorHandler = require("./error.hander")
+const customErrorHandler = require("./custom-error.handler")
 
 module.exports = async function(code, email) {
     try{

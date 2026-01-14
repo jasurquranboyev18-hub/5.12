@@ -17,14 +17,14 @@ const UserSchema = new Schema(
       lowercase: true,
       match: [
         /^\S+@\S+\.\S+$/,
-        "Email noto‘g‘ri formatda (masalan: test@gmail.com)",
+        "Email noto'g'ri formatda (masalan: test@gmail.com)",
       ],
     },
 
     password: {
       type: String,
       required: true,
-      minlength: [8, "Parol kamida 8 ta belgidan iborat bo‘lishi kerak"],
+      minlength: [8, "Parol kamida 8 ta belgidan iborat bo'lishi kerak"],
     },
     role: {
       type: String,
@@ -61,7 +61,7 @@ const UserSchema = new Schema(
         validator: function (value) {
           return /^\+998\d{2} d{3} d{2} d{2}/;
         },
-        message: "telefon raqam formati +99890 000 00 00 bunday bo'lishi kerak",
+        message: "telefon raqam formati +99890 97 718 2030 bunday bo'lishi kerak",
       },
     },
     

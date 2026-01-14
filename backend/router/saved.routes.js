@@ -1,10 +1,10 @@
-const { Saved } = require("../controller/saved.controller")
-const authmiddleware = require("../middleware/authmiddleware")
+const { Saved } = require("../CONTROLLER/seved.controller")
+const authMiddleware = require("../middlewares/auth.middleware")
 
 const savedrouter = require("express").Router()
 
 
 
-savedrouter.post("/cars/:id/saved", authmiddleware, Saved)
+savedrouter.post("/cars/:id/saved", authMiddleware, Saved)
 
 module.exports = savedrouter 

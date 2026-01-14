@@ -1,5 +1,6 @@
-const CustomErrorHandler = require("../utils/custom-error-handler")
-const { CategoryValidator } = require("../validator/category.validator")
+
+const CustomErrorHandler = require("../utils/custom-error.handler")
+const { CategoryValidator } = require("../VALIDATOR/catigorey.validotor")
 
 
 

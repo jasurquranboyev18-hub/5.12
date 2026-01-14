@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs")
-const CustomErrorHandler = require("../utils/custom-error-handler");
-const userSchema = require("../schema/register.login.schema");
-const savedSchema = require("../schema/saved.schema");
+const CustomErrorHandler = require("../utils/custom-error.handler");
+const userSchema = require("../schema/register.login.schem");
+const savedSchema = require("../schema/sevd.schema");
 
 
 const change_password = async (req, res, next) => {

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const CustomErrorHandler = require("../utils/custom-error-handler");
-const carSchema = require("../schema/car.schema");
+const Carsschema = require("../schema/car.schema");
+const CustomErrorHandler = require("../utils/custom-error.handler");
 
 const getCars = async (req, res, next) => {
   try {
@@ -10,7 +10,7 @@ const getCars = async (req, res, next) => {
     if (brand) filter.brand = brand;
     if (status) filter.status = status;
 
-    const cars = await carSchema.find(filter).sort({ createdAt: -1 });
+    const cars = await Carsschema.find(filter).sort({ createdAt: -1 });
 
     res.status(200).json(cars);
   } catch (error) {
@@ -36,7 +36,7 @@ const addCar = async (req, res, next) => {
       return next(CustomErrorHandler.BadRequest("All required fields must be filled"));
     }
 
-    const car = await carSchema.create({
+    const car = await Carsschema.create({
       brand,
       model,
       year,
@@ -65,7 +65,7 @@ const getCar = async (req, res, next) => {
       return next(CustomErrorHandler.BadRequest("Invalid car id"));
     }
 
-    const car = await carSchema.findById(req.params.id);
+    const car = await Carsschema.findById(req.params.id);
 
     if (!car) {
       return next(CustomErrorHandler.NotFound("Car not found"));
@@ -80,7 +80,7 @@ const getCar = async (req, res, next) => {
 
 const updateCar = async (req, res, next) => {
   try {
-    const updatedCar = await carSchema.findByIdAndUpdate(
+    const updatedCar = await Carsschema.findByIdAndUpdate(
       req.params.id,
       req.body,
       { new: true }
@@ -102,7 +102,7 @@ const updateCar = async (req, res, next) => {
 
 const deleteCar = async (req, res, next) => {
   try {
-    const car = await carSchema.findByIdAndDelete(req.params.id);
+    const car = await Carsschema.findByIdAndDelete(req.params.id);
 
     if (!car) {
       return next(CustomErrorHandler.NotFound("Car not found"));

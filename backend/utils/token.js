@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken")
-const CustomErrorHandler = require("./custom-error-handler")
+const CustomErrorHandler = require("./custom-error.handler")
 
 const accesstoken = (payload) => {
     try {

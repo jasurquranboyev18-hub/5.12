@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken")
-const CustomErrorHandler = require("../utils/custom-error-handler")
+const CustomErrorHandler = require("../utils/custom-error.handler")
 
 module.exports = function (req, res, next)  {
     try {

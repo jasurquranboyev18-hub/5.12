@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
-const customErrorHandler = require("../utils/custom-error-handler");
-const categorySchema = require("../schema/category.schema");
+const CustomErrorHandler = require("../utils/custom-error.handler");
 
 // GET ALL CATEGORIES
 const getCategories = async (req, res, next) => {
@@ -43,7 +42,7 @@ const getCategory = async (req, res, next) => {
   try {
     const category = await categorySchema.findById(req.params.id);
     if (!category) {
-      return next(customErrorHandler.NotFound("Category not found"));
+      return next(CustomErrorHandler.NotFound("Category not found"));
     }
     res.status(200).json(category);
   } catch (error) {

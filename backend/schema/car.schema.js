@@ -1,6 +1,7 @@
-const mongoose = require("mongoose");
+const { Schema, model } = require("mongoose");
 
-const carSchema = new mongoose.Schema(
+
+const carSchema = new Schema(
   {
     brand: {
       type: String,
@@ -50,7 +51,7 @@ const carSchema = new mongoose.Schema(
     },
 
     createdBy: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
@@ -58,4 +59,5 @@ const carSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Car", carSchema);
+const Carsschema = model("Car", carSchema);
+module.exports = Carsschema

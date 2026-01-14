@@ -1,8 +1,4 @@
-const CustomErrorHandler = require("../utils/custom-error-handler")
-const { CarValidator } = require("../validator/car.validator")
-
-
-
+const CustomErrorHandler = require("../utils/custom-error.handler")
 
 
 module.exports = function(req, res, next){

@@ -1,4 +1,5 @@
-const savedSchema = require("../schema/saved.schema")
+const savedSchema = require("../schema/sevd.schema")
+
 
 
 const Saved = async (req, res, next) => {

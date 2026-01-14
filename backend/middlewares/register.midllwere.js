@@ -1,4 +1,4 @@
-const CustomErrorHandler = require("../utils/custom-error-handler")
+const CustomErrorHandler = require("../utils/custom-error.handler")
 const { AuthValidator } = require("../validator/register.login.validator")
 
 
